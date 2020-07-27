@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A64F4722-53E3-49D2-9B91-5B3EE44BDF10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ex3.WindowsUI</RootNamespace>
+    <AssemblyName>Ex3.WindowsUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Ex3.WindowsUI.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FuelTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GarageMainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GarageMainMenuForm.Designer.cs">
+      <DependentUpon>GarageMainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicennseNumberRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicennseNumberRequestForm.Designer.cs">
+      <DependentUpon>LicennseNumberRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinutesToCharg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewVehicleInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowVehiclesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusRequestForm.Designer.cs">
+      <DependentUpon>StatusRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleInformationForm.Designer.cs">
+      <DependentUpon>VehicleInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleTypesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsUIGarageSystem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GarageMainMenuForm.resx">
+      <DependentUpon>GarageMainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicennseNumberRequestForm.resx">
+      <DependentUpon>LicennseNumberRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusRequestForm.resx">
+      <DependentUpon>StatusRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleInformationForm.resx">
+      <DependentUpon>VehicleInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleTypesForm.resx">
+      <DependentUpon>VehicleTypesForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ex03.GarageLogic\Ex03.GarageLogic.csproj">
+      <Project>{6bfb0c62-5c58-401c-88b2-9a9eb2060430}</Project>
+      <Name>Ex03.GarageLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
